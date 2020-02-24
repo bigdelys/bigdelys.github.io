@@ -1,0 +1,81 @@
+---
+layout: default
+section_id: portfolio
+works:
+  - image: images/1-s2.0-S1053811919306366-gr3.jpg
+    class: graphic-design
+    title: Beautiful Girl
+    desc: "Design &amp; Development"
+  - image: images/BW smart key 2nd generation.png
+    class: web-design print
+    title: Look at me
+    desc: "Design &amp; Development"
+  - image: images/discovery-mobi.png
+    class: brand wide
+    title: Am I cute
+    desc: "Design &amp; Development"
+  - image: images/harvest_dense_1_5_grid_depth_at_least_1_mm_inside_hit_cube_blue_stars.png
+    class: development
+    title: Umbrella
+    desc: "Design &amp; Development"
+  - image: images/Neuro_image_cover_png_small.png
+    class: print brand
+    title: Canned Bros
+    desc: "Design &amp; Development"
+  - image: images/tankgame.jpg
+    class: web-design
+    title: Hale
+    desc: "Design &amp; Development"
+  
+
+---
+
+<div class='full' style='background: #333'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <h2 style='color: #fff;'>Our works</h2>
+    </div>
+  </div>
+  <div class='two spacing'></div>
+</div>
+<div class='two spacing'></div>
+<div class='spacing'></div>
+<div class='mod modMasonryGallery'>
+  <div class='gallery-nav'>
+    <ul>
+      <li class='current'>
+        <a data-cat='all' href='#'>All</a>
+      </li>
+      <li>
+        <a data-cat='graphic-design' href='#'>Graphic Design</a>
+      </li>
+      <li>
+        <a data-cat='web-design' href='#'>Web Design</a>
+      </li>
+      <li>
+        <a data-cat='brand' href='#'>Brand</a>
+      </li>
+      <li>
+        <a data-cat='development' href='#'>Development</a>
+      </li>
+      <li>
+        <a data-cat='print' href='#'>Print</a>
+      </li>
+    </ul>
+  </div>
+  <ul class='gallery'>
+    {% for work in page.works %}
+      <li class='{{work.class}}'>
+        <a href='portfolio-item.html'>
+          <img alt="" src="{{work.image}}" />
+          <div class='overlay'>
+            <div class='thumb-info'>
+              <h3>{{work.title}}</h3>
+              <p>{{work.desc}}</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

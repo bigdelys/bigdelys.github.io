@@ -1,0 +1,97 @@
+---
+layout: default
+section_id: home
+works:
+- image: images/discovery-mobi.png
+  class: eeg wide
+  title: Mobile Brain/Body Imaging
+  desc: "EEG + motion mapture biosignal analysis"
+
+- image: images/manyfesto.svg
+  class: python-module wide
+  title: Manyfesto
+  desc: "Python module: Metadata as code"
+
+- image: images/varpack_logo.svg
+  class: python-module wide
+  title: Varpack
+  desc: "Python module: smart data IO for Python"
+
+- image: images/Neuro_image_cover_png_small.png
+  class: eeg toolbox wide
+  title: Measure Projection Toolbox
+  desc: "Matlab toolbox for probabilistic multi-subject EEG independent component source comparison and inference"
+
+- image: images/harvest_dense_1_5_grid_depth_at_least_1_mm_inside_hit_cube_blue_stars.png
+  class: eeg wide
+  title: EEG ICA Dipoles
+  desc: "Combning EEG ICA Dipole"
+
+- image: images/1-s2.0-S1053811919306366-gr3.jpg
+  class: eeg wide
+  title: EEG Mega-analysis
+  desc: "Combining raw data across many EEG studies"
+
+- image: images/BW smart key 2nd generation.png
+  class: hobby wide
+  title: Key+
+  desc: "Patent: electromechanical device to tell you if you have locked the door"
+
+- image: images/electro3D05.jpg
+  class: hobby physics wide
+  title: Electrostatics 3D software
+  desc: "Commercial application: Electric Field & Potential Simulator"
+
+- image: images/Mag3D03.jpg
+  class: hobby physics wide
+  title: Magnetism 3D software
+  desc: "Commercial application: Magnetic Field Simulator"
+
+- image: images/vectorFieldSample.jpg
+  class: toolbox wide
+  title: Vector field visualization
+  desc: "MATLAB toolbox: Linear Integral Convolution (LIC)"
+
+- image: images/tankgame.jpg
+  class: hobby game wide
+  title: Tank Game
+  desc: "Fight on a procedurally-generated landscape"
+---
+
+<div class='mod modMasonryGallery'>
+  <div class='two spacing'></div>
+  <div class='gallery-nav'>
+    <ul>
+      <li class='current'>
+        <a data-cat='all' href='#'>All</a>
+      </li>
+      <li>
+        <a data-cat='python-module' href='#'>Python Module</a>
+      </li>
+      <li>
+        <a data-cat='eeg' href='#'>Brain Science</a>
+      </li>
+      <li>
+        <a data-cat='hobby' href='#'>Hobby</a>
+      </li>
+      <li>
+        <a data-cat='toolbox' href='#'>Toolbox</a>
+      </li>
+    </ul>
+  </div>
+  <ul class='gallery'>
+    {% for work in page.works %}
+      <li class='{{work.class}}'>
+        <a href='portfolio-item.html'>
+          <img alt="" src="{{work.image}}" />
+          <div class='overlay'>
+            <div class='thumb-info'>
+              <h3>{{work.title}}</h3>
+              <p>{{work.desc}}</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
